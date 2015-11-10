@@ -7,6 +7,7 @@
 //
 
 #import "RXCTData.h"
+#import <UIKit/UIKit.h>
 
 /*
  普通文本类

@@ -12,6 +12,10 @@
 #import "RXCTImageFrame.h"
 #import "RXCTLinkFrame.h"
 
+
+
+
+
 @implementation RXCTView
 
 #pragma mark - UIGestureRecognizerDelegate
@@ -91,7 +95,10 @@
 
 - (void)initialize
 {
-    [self rx_addGestureRecognizerWithTarget:self action:@selector(tgrAction:)];
+    // 添加一个点击手势
+    UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tgrAction:)];
+    self.userInteractionEnabled = YES;
+    [self addGestureRecognizer:tgr];
 }
 
 

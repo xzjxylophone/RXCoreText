@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "RXCTFrame.h"
+#import <UIKit/UIKit.h>
 
 
 /*

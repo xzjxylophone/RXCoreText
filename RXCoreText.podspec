@@ -1,5 +1,4 @@
-
-d::Spec.new do |s|
+Pod::Spec.new do |s|
   s.name     = 'RXCoreText'
   s.version  = '0.1'
   s.license  = 'MIT'
@@ -14,7 +13,8 @@ d::Spec.new do |s|
     RXCoreText is a simple image and text show!
   }
 
-  s.source_files = 'RXCoreText/*.{h,m}'
+  s.source_files = 'RXCoreText/*.{h,m}’
+  s.public_header_files = ‘RXCoreText/RXCTHeader.h’
 
   s.ios.frameworks = 'Foundation', 'UIKit', 'CoreText', 'CoreGraphics'
 

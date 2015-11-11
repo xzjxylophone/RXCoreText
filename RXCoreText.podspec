@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     RXCoreText is a simple image and text show.
   }
   s.source_files = 'RXCoreText/*.{h,m}’
-  s.ios.frameworks = 'Foundation', 'UIKit', 'CoreText', 'CoreGraphics'
+  s.ios.framework = 'Foundation', 'UIKit', 'CoreText', 'CoreGraphics'
   s.public_header_files = 'RXCoreText/RXCTHeader.h'
   s.ios.deployment_target = '6.0'
   s.requires_arc = true

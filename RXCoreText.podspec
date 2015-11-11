@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.description = %{
     RXCoreText is a simple image and text show.
   }
-  s.source_files = 'RXCoreText/*.{h,m}’
+  s.source_files = 'RXCoreText/*.{h,m}'
   s.frameworks = 'Foundation', 'UIKit', 'CoreText', 'CoreGraphics'
   s.public_header_files = 'RXCoreText/RXCTHeader.h'
   s.requires_arc = true

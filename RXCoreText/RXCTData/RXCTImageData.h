@@ -8,8 +8,6 @@
 
 #import "RXCTData.h"
 
-#import <CoreGraphics/CoreGraphics.h>
-
 /*
  图片类
  */

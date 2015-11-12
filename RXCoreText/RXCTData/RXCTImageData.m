@@ -8,7 +8,6 @@
 
 #import "RXCTImageData.h"
 #import "RXCTFrameParserConfig.h"
-#import <CoreText/CoreText.h>
 #import "RXCTImageFrame.h"
 @implementation RXCTImageData
 

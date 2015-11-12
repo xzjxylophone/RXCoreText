@@ -8,7 +8,6 @@
 
 #import "RXCTLinkData.h"
 #import "RXCTFrameParserConfig.h"
-#import <CoreText/CoreText.h>
 #import "RXCTLinkFrame.h"
 @implementation RXCTLinkData
 

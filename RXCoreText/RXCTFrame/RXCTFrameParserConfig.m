@@ -7,7 +7,6 @@
 //
 
 #import "RXCTFrameParserConfig.h"
-#import <CoreText/CoreText.h>
 @implementation RXCTFrameParserConfig
 - (id)init
 {

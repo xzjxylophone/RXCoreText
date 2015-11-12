@@ -22,7 +22,7 @@
 }
 
 #pragma mark - Private
-- (void)testMyContent1
+- (void)testRXCTView
 {
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     RXCTFrameParserConfig *config = [[RXCTFrameParserConfig alloc] init];
@@ -44,6 +44,7 @@
     
     // 图片
     RXCTImageData *imageData = [[RXCTImageData alloc] init];
+    // 本地图片地址
     imageData.imageName = @"coretext-image-1.jpg";
     imageData.width = 340;
     imageData.height = 160;
@@ -78,7 +79,7 @@
     self.title = @"首页";
     
     
-    [self testMyContent1];
+    [self testRXCTView];
 }
 
 - (void)didReceiveMemoryWarning {

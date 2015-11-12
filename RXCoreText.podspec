@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'RXCoreText'
-  s.version  = '0.7'
+  s.version  = ‘0.8'
   s.license  = 'MIT'
   s.summary  = 'Image and text use CoreText to show.'
   s.homepage = 'https://github.com/xzjxylophone/RXCoreText'

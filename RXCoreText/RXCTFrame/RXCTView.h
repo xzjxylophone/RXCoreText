@@ -8,6 +8,7 @@
 
 #import "RXCTFrameData.h"
 #import <UIKit/UIKit.h>
+#import <CoreText/CoreText.h>
 
 @class RXCTData;
 @class RXCTView;

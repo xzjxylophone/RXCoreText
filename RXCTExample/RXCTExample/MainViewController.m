@@ -9,19 +9,25 @@
 #import "MainViewController.h"
 #import "RXCTHeader.h"
 
-@interface MainViewController ()
+@interface MainViewController ()<RXCTViewDelegate>
 
 @end
 
 @implementation MainViewController
 
+#pragma mark - RXCTViewDelegate
+- (void)tapInRXCTView:(RXCTView *)rxctView rxctData:(RXCTData *)rxctData
+{
+    NSLog(@"rxctData:%@", rxctData);
+}
 
+#pragma mark - Private
 - (void)testMyContent1
 {
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     RXCTFrameParserConfig *config = [[RXCTFrameParserConfig alloc] init];
     config.width = width;
-    config.lineSpace = 10;
+    config.lineSpace = 20;
     config.font = [UIFont systemFontOfSize:22];
     config.textColor = [UIColor greenColor];
     
@@ -39,7 +45,6 @@
     // 图片
     RXCTImageData *imageData = [[RXCTImageData alloc] init];
     imageData.imageName = @"coretext-image-1.jpg";
-    imageData.imageUrl = @"";
     imageData.width = 340;
     imageData.height = 160;
     
@@ -59,7 +64,9 @@
     CGRect frame = rxctView.frame;
     frame.size.height = data.height;
     rxctView.frame = frame;
+    rxctView.e_RXCT_TapType = kE_RXCT_TapType_Next;
     rxctView.backgroundColor = [UIColor yellowColor];
+    rxctView.delegate = self;
     [self.view addSubview:rxctView];
 }
 

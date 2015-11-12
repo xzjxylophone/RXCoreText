@@ -35,7 +35,7 @@ static void deallocCallback(void *ref)
     // Do Nothing
 }
 
-
+#pragma mark - Override
 - (NSAttributedString *)attributedStringWithConfig:(RXCTFrameParserConfig *)config outRXCTFrame:(RXCTFrame **)outRXCTFrame
 {
 
@@ -59,10 +59,16 @@ static void deallocCallback(void *ref)
     CFRelease(delegateRef);
     
     RXCTImageFrame *rxctFrame = [[RXCTImageFrame alloc] init];
-    rxctFrame.data = self;
+    rxctFrame.rxctData = self;
     *outRXCTFrame = rxctFrame;
     
     return attributedString;
+}
+
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"class=%@, local image: width=%.2f height=%.2f imageName=%@", NSStringFromClass([self class]), self.width, self.height, self.imageName];
 }
 
 

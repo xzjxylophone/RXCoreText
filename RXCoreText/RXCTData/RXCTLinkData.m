@@ -12,6 +12,9 @@
 #import "RXCTLinkFrame.h"
 @implementation RXCTLinkData
 
+
+
+#pragma mark - Override
 - (NSAttributedString *)attributedStringWithConfig:(RXCTFrameParserConfig *)config outRXCTFrame:(RXCTFrame **)outRXCTFrame
 {
     NSMutableDictionary *attributes = config.attributes;
@@ -36,10 +39,16 @@
     NSAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:content attributes:attributes];
     
     RXCTLinkFrame *rxctFrame = [[RXCTLinkFrame alloc] init];
-    rxctFrame.data = self;
+    rxctFrame.rxctData = self;
     *outRXCTFrame = rxctFrame;
     
     return attributedString;
+}
+
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"class=%@, link text: content=%@", NSStringFromClass([self class]), self.content];
 }
 
 

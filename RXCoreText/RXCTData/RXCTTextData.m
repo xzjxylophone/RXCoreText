@@ -12,6 +12,9 @@
 #import "RXCTTextFrame.h"
 @implementation RXCTTextData
 
+
+
+#pragma mark - Override
 - (NSAttributedString *)attributedStringWithConfig:(RXCTFrameParserConfig *)config outRXCTFrame:(RXCTFrame **)outRXCTFrame
 {
     NSMutableDictionary *attributes = config.attributes;
@@ -30,10 +33,15 @@
     NSAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:content attributes:attributes];
     
     RXCTTextFrame *rxctFrame = [[RXCTTextFrame alloc] init];
-    rxctFrame.data = self;
+    rxctFrame.rxctData = self;
     *outRXCTFrame = rxctFrame;
     
     return attributedString;
+}
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"class=%@, normal text: content=%@", NSStringFromClass([self class]), self.content];
 }
 
 

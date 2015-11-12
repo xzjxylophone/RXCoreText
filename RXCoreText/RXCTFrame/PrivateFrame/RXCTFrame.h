@@ -17,7 +17,7 @@
 
 @interface RXCTFrame : NSObject
 
-@property (nonatomic, strong) RXCTData *data;  // 对应的数据
+@property (nonatomic, strong) RXCTData *rxctData;  // 对应的数据
 
 
 @property (nonatomic, assign) NSRange range; // 内容所占的区域

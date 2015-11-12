@@ -169,6 +169,7 @@
     ctFrameData.height = textHeight;
     ctFrameData.content = attributedString;
     ctFrameData.attributedArray = array;
+    ctFrameData.lineSpace = config.lineSpace;
     CFRelease(frameRef);
     CFRelease(framesetterRef);
     return ctFrameData;

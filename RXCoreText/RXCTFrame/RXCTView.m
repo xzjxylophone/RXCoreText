@@ -26,6 +26,41 @@
 {
     UITapGestureRecognizer *tgr = sender;
     CGPoint point = [tgr locationInView:self];
+    BOOL result = [self tapWithPoint:point];
+    if (!result) {
+        CGFloat offset = 0;
+        switch (self.e_RXCT_TapType) {
+            case kE_RXCT_TapType_None:
+                return;
+            case kE_RXCT_TapType_Next:
+                offset = self.rxctFrameData.lineSpace;
+                break;
+            case kE_RXCT_TapType_Pre:
+                offset = - self.rxctFrameData.lineSpace;
+                break;
+            default:
+                break;
+        }
+        point.y += offset;
+        [self tapWithPoint:point];
+    }
+}
+
+#pragma mark - Private
+
+- (void)initialize
+{
+    // 添加一个点击手势
+    UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tgrAction:)];
+    self.userInteractionEnabled = YES;
+    [self addGestureRecognizer:tgr];
+    
+    self.e_RXCT_TapType = kE_RXCT_TapType_None;
+}
+
+
+- (BOOL)tapWithPoint:(CGPoint)point
+{
     for (RXCTImageFrame *imageFrame in self.rxctFrameData.imageAry) {
         // 翻转坐标系, 因为 imageData 中的坐标是CoreText的坐标系
         CGRect imageRect = imageFrame.imagePosition;
@@ -33,14 +68,14 @@
         imagePosition.y = self.bounds.size.height - imageRect.origin.y - imageRect.size.height;
         CGRect rect = CGRectMake(imagePosition.x, imagePosition.y, imageRect.size.width, imageRect.size.height);
         if (CGRectContainsPoint(rect, point)) {
-            NSLog(@"click");
-            return;
+            [self safeDelegate_tapInRXCTView:self rxctData:imageFrame.rxctData];
+            return YES;
         }
     }
     CTFrameRef frameRef = self.rxctFrameData.frameRef;
     CFArrayRef lines = CTFrameGetLines(frameRef);
     if (lines == NULL) {
-        return;
+        return NO;
     }
     CFIndex count = CFArrayGetCount(lines);
     // 获得每一行的origin坐标
@@ -70,46 +105,52 @@
     }
     
     if (idx == -1) {
-        NSLog(@"你没有点击任何文字区域");
-        return;
+        return NO;
     }
     
-    RXCTLinkFrame *foundLinkFrame = nil;
+    NSLog(@"idx:%ld", idx);
+    RXCTFrame *foundFrame = nil;
     for (RXCTLinkFrame *linkFrame in self.rxctFrameData.linkAry) {
-        NSLog(@"idx:%zd, range:%@", idx, NSStringFromRange(linkFrame.range));
         if (NSLocationInRange(idx, linkFrame.range)) {
-            foundLinkFrame = linkFrame;
+            foundFrame = linkFrame;
             break;
         }
     }
     
-    if (foundLinkFrame == nil) {
-        NSLog(@"没有点击到可连接区域文字");
-        return;
-    }
     
-    NSLog(@"click:kkkkkkkk");
+    
+    RXCTFrame *rxctFrame = nil;
+    for (RXCTFrame *tmp in self.rxctFrameData.attributedArray) {
+        if (NSLocationInRange(idx, tmp.range)) {
+            rxctFrame = tmp;
+            break;
+        }
+    }
+
+    if (rxctFrame != nil) {
+        [self safeDelegate_tapInRXCTView:self rxctData:rxctFrame.rxctData];
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
-#pragma mark - Private
 
-- (void)initialize
+#pragma mark - Safe Delegate
+- (void)safeDelegate_tapInRXCTView:(RXCTView *)rxctView rxctData:(RXCTData *)rxctData
 {
-    // 添加一个点击手势
-    UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tgrAction:)];
-    self.userInteractionEnabled = YES;
-    [self addGestureRecognizer:tgr];
+    if ([self.delegate respondsToSelector:@selector(tapInRXCTView:rxctData:)]) {
+        [self.delegate tapInRXCTView:rxctView rxctData:rxctData];
+    }
 }
+
 
 
 #pragma mark - Override
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
     // Drawing code
     [super drawRect:rect];
-    
     CGContextRef context = UIGraphicsGetCurrentContext();
     // 将坐标系上下翻转。对于底层的绘制引擎来说，屏幕的左下角是（0, 0）坐标。而对于上层的 UIKit 来说，左上角是 (0, 0) 坐标。所以我们为了之后的坐标系描述按 UIKit 来做，所以先在这里做一个坐标系的上下翻转操作。翻转之后，底层和上层的 (0, 0) 坐标就是重合的了。
     CGContextSetTextMatrix(context, CGAffineTransformIdentity);
@@ -120,15 +161,13 @@
         CTFrameDraw(self.rxctFrameData.frameRef, context);
     }
     
-    
     for (RXCTImageFrame *imageFrame in self.rxctFrameData.imageAry) {
-        RXCTImageData *imageData = (RXCTImageData *)imageFrame.data;
+        RXCTImageData *imageData = (RXCTImageData *)imageFrame.rxctData;
         UIImage *image = [UIImage imageNamed:imageData.imageName];
         if (image) {
             CGContextDrawImage(context, imageFrame.imagePosition, image.CGImage);
         }
     }
-    
 }
 
 

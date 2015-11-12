@@ -20,7 +20,7 @@
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;
 @property (nonatomic, copy) NSString *imageName;
-@property (nonatomic, copy) NSString *imageUrl;
+
 
 
 @end

@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
-  s.name     = 'RXCoreText'
-  s.version  = ‘0.8'
-  s.license  = 'MIT'
-  s.summary  = 'Image and text use CoreText to show.'
-  s.homepage = 'https://github.com/xzjxylophone/RXCoreText'
+  s.name     = "RXCoreText"
+  s.version  = "0.8"
+  s.license  = "MIT"
+  s.summary  = "Image and text use CoreText to show."
+  s.homepage = "https://github.com/xzjxylophone/RXCoreText"
   s.author   = { 'Rush.D.Xzj' => 'xzjxylophoe@gmail.com' }
   s.social_media_url = "http://weibo.com/xzjxylophone"
   s.source   = { :git => 'https://github.com/xzjxylophone/RXCoreText.git', :tag => "v#{s.version}" }

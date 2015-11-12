@@ -13,5 +13,6 @@ Pod::Spec.new do |s|
   s.source_files = 'RXCoreText/**/*.{h,m}'
   s.frameworks = 'Foundation', 'UIKit', 'CoreText', 'CoreGraphics'
   s.requires_arc = true
+  s.platform = :ios, '5.0'
 end
 

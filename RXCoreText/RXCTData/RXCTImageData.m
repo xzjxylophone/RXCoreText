@@ -67,7 +67,7 @@ static void deallocCallback(void *ref)
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"class=%@, local image: width=%.2f height=%.2f imageName=%@", NSStringFromClass([self class]), self.width, self.height, self.imageName];
+    return [NSString stringWithFormat:@"class=%@, image: width=%.2f height=%.2f imageName=%@ imageUrl=%@", NSStringFromClass([self class]), self.width, self.height, self.imageName, self.imageUrl];
 }
 
 

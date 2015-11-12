@@ -11,12 +11,27 @@
 #import "RXCTLinkData.h"
 #import "RXCTImageFrame.h"
 #import "RXCTLinkFrame.h"
+#import "UIImageView+WebCache.h"
 
+@interface RXCTView ()
 
+@property (nonatomic, strong) NSArray *ivAry;
 
+@end
 
 
 @implementation RXCTView
+
+
+#pragma mark - Proverty
+- (void)setRxctFrameData:(RXCTFrameData *)rxctFrameData
+{
+    // 当数据源变化的时候
+    // 内部的iv也是需要变化的
+    _rxctFrameData = rxctFrameData;
+    self.ivAry = nil;
+}
+
 
 #pragma mark - UIGestureRecognizerDelegate
 
@@ -135,6 +150,38 @@
     }
 }
 
+- (void)updateWithImage
+{
+    NSMutableArray *ary = [NSMutableArray array];
+    for (RXCTImageFrame *imageFrame in self.rxctFrameData.imageAry) {
+        RXCTImageData *imageData = (RXCTImageData *)imageFrame.rxctData;
+        if (imageData.imageUrl.length != 0) {
+            [ary addObject:imageFrame];
+        }
+    }
+    if (self.ivAry.count == ary.count) {
+        return;
+    }
+    for (UIView *view in self.ivAry) {
+        [view removeFromSuperview];
+    }
+    NSMutableArray *ivAry = [NSMutableArray array];
+    for (RXCTImageFrame *imageFrame in ary) {
+        RXCTImageData *rxctImageData = (RXCTImageData *)imageFrame.rxctData;
+        CGRect ivFrame = imageFrame.imagePosition;
+        ivFrame.origin.y = self.bounds.size.height - ivFrame.origin.y - ivFrame.size.height;
+        UIImageView *iv = [[UIImageView alloc] initWithFrame:ivFrame];
+        NSURL *url = [NSURL URLWithString:rxctImageData.imageUrl];
+        [iv sd_setImageWithURL:url placeholderImage:rxctImageData.imagePlacholder];
+        [ivAry addObject:iv];
+        [self addSubview:iv];
+    }
+    self.ivAry = ivAry;
+    
+    
+    
+}
+
 
 #pragma mark - Safe Delegate
 - (void)safeDelegate_tapInRXCTView:(RXCTView *)rxctView rxctData:(RXCTData *)rxctData
@@ -153,6 +200,7 @@
     [super drawRect:rect];
     CGContextRef context = UIGraphicsGetCurrentContext();
     // 将坐标系上下翻转。对于底层的绘制引擎来说，屏幕的左下角是（0, 0）坐标。而对于上层的 UIKit 来说，左上角是 (0, 0) 坐标。所以我们为了之后的坐标系描述按 UIKit 来做，所以先在这里做一个坐标系的上下翻转操作。翻转之后，底层和上层的 (0, 0) 坐标就是重合的了。
+    // 这个应该是 以左下角为(0,0)
     CGContextSetTextMatrix(context, CGAffineTransformIdentity);
     CGContextTranslateCTM(context, 0, self.bounds.size.height);
     CGContextScaleCTM(context, 1.0, -1.0);
@@ -164,11 +212,17 @@
     for (RXCTImageFrame *imageFrame in self.rxctFrameData.imageAry) {
         RXCTImageData *imageData = (RXCTImageData *)imageFrame.rxctData;
         UIImage *image = [UIImage imageNamed:imageData.imageName];
+        NSLog(@"imagePosition:%@", NSStringFromCGRect(imageFrame.imagePosition));
         if (image) {
             CGContextDrawImage(context, imageFrame.imagePosition, image.CGImage);
         }
     }
+    
+    [self updateWithImage];
+    
 }
+
+
 
 
 

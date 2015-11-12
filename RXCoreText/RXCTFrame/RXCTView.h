@@ -7,7 +7,7 @@
 //
 
 #import "RXCTFrameData.h"
-
+#import <UIKit/UIKit.h>
 
 @class RXCTData;
 @class RXCTView;

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 @interface RXCTFrameParserConfig : NSObject
 
 @property (nonatomic, assign) CGFloat width;            // 宽度

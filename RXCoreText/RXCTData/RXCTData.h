@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 
 @class RXCTFrame;
 @class RXCTFrameParserConfig;

@@ -2,6 +2,9 @@
 
 
 
+
+
+
 #pragma mark - RXCTViewDelegate
 - (void)tapInRXCTView:(RXCTView *)rxctView rxctData:(RXCTData *)rxctData
 {
@@ -57,6 +60,7 @@
     rxctView.delegate = self;
     [self.view addSubview:rxctView];
 }
+
 
 
 

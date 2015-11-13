@@ -11,7 +11,7 @@
 #import <CoreText/CoreText.h>
 
 @class RXCTFrame;
-@class RXCTFrameParserConfig;
+@class RXCTFrameConfig;
 
 
 /*
@@ -24,7 +24,7 @@
 /*
  此函数的作用是
  */
-- (NSAttributedString *)attributedStringWithConfig:(RXCTFrameParserConfig *)config outRXCTFrame:(RXCTFrame **)outRXCTFrame;
+- (NSAttributedString *)attributedStringWithConfig:(RXCTFrameConfig *)config outRXCTFrame:(RXCTFrame **)outRXCTFrame;
 
 
 @end

@@ -11,7 +11,7 @@
 
 
 #import "RXCTView.h"
-#import "RXCTFrameParserConfig.h"
+#import "RXCTFrameConfig.h"
 #import "RXCTFrameData.h"
 
 

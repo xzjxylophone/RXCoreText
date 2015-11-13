@@ -7,7 +7,7 @@
 //
 
 #import "RXCTImageData.h"
-#import "RXCTFrameParserConfig.h"
+#import "RXCTFrameConfig.h"
 #import "RXCTImageFrame.h"
 @implementation RXCTImageData
 
@@ -35,7 +35,7 @@ static void deallocCallback(void *ref)
 }
 
 #pragma mark - Override
-- (NSAttributedString *)attributedStringWithConfig:(RXCTFrameParserConfig *)config outRXCTFrame:(RXCTFrame **)outRXCTFrame
+- (NSAttributedString *)attributedStringWithConfig:(RXCTFrameConfig *)config outRXCTFrame:(RXCTFrame **)outRXCTFrame
 {
 
     CTRunDelegateCallbacks callbacks;

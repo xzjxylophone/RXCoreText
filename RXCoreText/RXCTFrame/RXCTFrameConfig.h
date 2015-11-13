@@ -1,5 +1,5 @@
 //
-//  RXCTFrameParserConfig.h
+//  RXCTFrameConfig.h
 //  RXExample
 //
 //  Created by Rush.D.Xzj on 15/11/3.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreText/CoreText.h>
-@interface RXCTFrameParserConfig : NSObject
+@interface RXCTFrameConfig : NSObject
 
 @property (nonatomic, assign) CGFloat width;            // 宽度
 @property (nonatomic, strong) UIFont *font;             // 字体

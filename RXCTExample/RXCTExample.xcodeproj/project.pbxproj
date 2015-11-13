@@ -19,7 +19,7 @@
 		58C4C2241BF1C7370071E20D /* RXCTLinkFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4C2141BF1C7370071E20D /* RXCTLinkFrame.m */; };
 		58C4C2251BF1C7370071E20D /* RXCTTextFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4C2161BF1C7370071E20D /* RXCTTextFrame.m */; };
 		58C4C2261BF1C7370071E20D /* RXCTFrameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4C2181BF1C7370071E20D /* RXCTFrameData.m */; };
-		58C4C2271BF1C7370071E20D /* RXCTFrameParserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4C21A1BF1C7370071E20D /* RXCTFrameParserConfig.m */; };
+		58C4C2271BF1C7370071E20D /* RXCTFrameConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4C21A1BF1C7370071E20D /* RXCTFrameConfig.m */; };
 		58C4C2281BF1C7370071E20D /* RXCTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4C21C1BF1C7370071E20D /* RXCTView.m */; };
 		58C4C22B1BF1C78F0071E20D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C4C22A1BF1C78F0071E20D /* CoreGraphics.framework */; };
 		58C4C22D1BF1C7D20071E20D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C4C22C1BF1C7D20071E20D /* UIKit.framework */; };
@@ -60,8 +60,8 @@
 		58C4C2161BF1C7370071E20D /* RXCTTextFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCTTextFrame.m; sourceTree = "<group>"; };
 		58C4C2171BF1C7370071E20D /* RXCTFrameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCTFrameData.h; sourceTree = "<group>"; };
 		58C4C2181BF1C7370071E20D /* RXCTFrameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCTFrameData.m; sourceTree = "<group>"; };
-		58C4C2191BF1C7370071E20D /* RXCTFrameParserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCTFrameParserConfig.h; sourceTree = "<group>"; };
-		58C4C21A1BF1C7370071E20D /* RXCTFrameParserConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCTFrameParserConfig.m; sourceTree = "<group>"; };
+		58C4C2191BF1C7370071E20D /* RXCTFrameConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCTFrameConfig.h; sourceTree = "<group>"; };
+		58C4C21A1BF1C7370071E20D /* RXCTFrameConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCTFrameConfig.m; sourceTree = "<group>"; };
 		58C4C21B1BF1C7370071E20D /* RXCTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCTView.h; sourceTree = "<group>"; };
 		58C4C21C1BF1C7370071E20D /* RXCTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCTView.m; sourceTree = "<group>"; };
 		58C4C21D1BF1C7370071E20D /* RXCTHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCTHeader.h; sourceTree = "<group>"; };
@@ -167,8 +167,8 @@
 				58C4C20E1BF1C7370071E20D /* PrivateFrame */,
 				58C4C2171BF1C7370071E20D /* RXCTFrameData.h */,
 				58C4C2181BF1C7370071E20D /* RXCTFrameData.m */,
-				58C4C2191BF1C7370071E20D /* RXCTFrameParserConfig.h */,
-				58C4C21A1BF1C7370071E20D /* RXCTFrameParserConfig.m */,
+				58C4C2191BF1C7370071E20D /* RXCTFrameConfig.h */,
+				58C4C21A1BF1C7370071E20D /* RXCTFrameConfig.m */,
 				58C4C21B1BF1C7370071E20D /* RXCTView.h */,
 				58C4C21C1BF1C7370071E20D /* RXCTView.m */,
 			);
@@ -345,7 +345,7 @@
 				58C4C2281BF1C7370071E20D /* RXCTView.m in Sources */,
 				58C4C2331BF1D31C0071E20D /* MainViewController.m in Sources */,
 				58C4C1EE1BF1C6E40071E20D /* main.m in Sources */,
-				58C4C2271BF1C7370071E20D /* RXCTFrameParserConfig.m in Sources */,
+				58C4C2271BF1C7370071E20D /* RXCTFrameConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

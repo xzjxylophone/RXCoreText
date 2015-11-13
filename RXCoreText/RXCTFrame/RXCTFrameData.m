@@ -11,7 +11,7 @@
 #import "RXCTLinkFrame.h"
 #import "RXCTImageData.h"
 
-#import "RXCTFrameParserConfig.h"
+#import "RXCTFrameConfig.h"
 
 @interface RXCTFrameData ()
 
@@ -138,7 +138,7 @@
 
 #pragma mark - Class Method
 
-+ (RXCTFrameData *)parseWithArray:(NSArray *)ary config:(RXCTFrameParserConfig *)config
++ (RXCTFrameData *)parseWithArray:(NSArray *)ary config:(RXCTFrameConfig *)config
 {
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
     NSMutableArray *array = [NSMutableArray array];

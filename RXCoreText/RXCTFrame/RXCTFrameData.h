@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreText/CoreText.h>
-@class RXCTFrameParserConfig;
+@class RXCTFrameConfig;
 
 @interface RXCTFrameData : NSObject
 
@@ -37,7 +37,7 @@
 
 
 // 解析数据
-+ (RXCTFrameData *)parseWithArray:(NSArray *)ary config:(RXCTFrameParserConfig *)config;
++ (RXCTFrameData *)parseWithArray:(NSArray *)ary config:(RXCTFrameConfig *)config;
 
 
 

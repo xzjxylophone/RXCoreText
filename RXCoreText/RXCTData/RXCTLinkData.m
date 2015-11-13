@@ -7,14 +7,14 @@
 //
 
 #import "RXCTLinkData.h"
-#import "RXCTFrameParserConfig.h"
+#import "RXCTFrameConfig.h"
 #import "RXCTLinkFrame.h"
 @implementation RXCTLinkData
 
 
 
 #pragma mark - Override
-- (NSAttributedString *)attributedStringWithConfig:(RXCTFrameParserConfig *)config outRXCTFrame:(RXCTFrame **)outRXCTFrame
+- (NSAttributedString *)attributedStringWithConfig:(RXCTFrameConfig *)config outRXCTFrame:(RXCTFrame **)outRXCTFrame
 {
     NSMutableDictionary *attributes = config.attributes;
     UIColor *textColor = self.textColor;

@@ -25,7 +25,7 @@
 - (void)testRXCTView
 {
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
-    RXCTFrameParserConfig *config = [[RXCTFrameParserConfig alloc] init];
+    RXCTFrameConfig *config = [[RXCTFrameConfig alloc] init];
     config.width = width;
     config.lineSpace = 10;
     config.font = [UIFont systemFontOfSize:22];

@@ -159,6 +159,7 @@
             [ary addObject:imageFrame];
         }
     }
+    // 通过此方法,防止ImageView的重复remove和add
     if (self.ivAry.count == ary.count) {
         return;
     }
@@ -177,9 +178,6 @@
         [self addSubview:iv];
     }
     self.ivAry = ivAry;
-    
-    
-    
 }
 
 
@@ -204,11 +202,9 @@
     CGContextSetTextMatrix(context, CGAffineTransformIdentity);
     CGContextTranslateCTM(context, 0, self.bounds.size.height);
     CGContextScaleCTM(context, 1.0, -1.0);
-    
     if (self.rxctFrameData) {
         CTFrameDraw(self.rxctFrameData.frameRef, context);
     }
-    
     for (RXCTImageFrame *imageFrame in self.rxctFrameData.imageAry) {
         RXCTImageData *imageData = (RXCTImageData *)imageFrame.rxctData;
         UIImage *image = [UIImage imageNamed:imageData.imageName];
@@ -217,9 +213,7 @@
             CGContextDrawImage(context, imageFrame.imagePosition, image.CGImage);
         }
     }
-    
     [self updateWithImage];
-    
 }
 
 

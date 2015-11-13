@@ -21,7 +21,6 @@
     UIColor *textColor = self.textColor;
     if (textColor != nil) {
         attributes[(id)kCTForegroundColorAttributeName] = (id)textColor.CGColor;
-
     }
     if (self.font != nil) {
         CGFloat fontSize = self.font.pointSize;
@@ -31,11 +30,9 @@
     }
     NSString *content = self.content;
     NSAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:content attributes:attributes];
-    
     RXCTTextFrame *rxctFrame = [[RXCTTextFrame alloc] init];
     rxctFrame.rxctData = self;
     *outRXCTFrame = rxctFrame;
-    
     return attributedString;
 }
 

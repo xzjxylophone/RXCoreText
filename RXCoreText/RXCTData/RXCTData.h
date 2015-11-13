@@ -22,7 +22,7 @@
 
 
 /*
- 此函数的作用是
+ 此函数的作用是得到一个NSAttributedString
  */
 - (NSAttributedString *)attributedStringWithConfig:(RXCTFrameConfig *)config outRXCTFrame:(RXCTFrame **)outRXCTFrame;
 

@@ -37,7 +37,6 @@ static void deallocCallback(void *ref)
 #pragma mark - Override
 - (NSAttributedString *)attributedStringWithConfig:(RXCTFrameConfig *)config outRXCTFrame:(RXCTFrame **)outRXCTFrame
 {
-
     CTRunDelegateCallbacks callbacks;
     memset(&callbacks, 0, sizeof(CTRunDelegateCallbacks));
     callbacks.version = kCTRunDelegateVersion1;
@@ -45,22 +44,18 @@ static void deallocCallback(void *ref)
     callbacks.getDescent = descentCallback;
     callbacks.getWidth = widthCallback;
     callbacks.dealloc = deallocCallback;
-    
     CTRunDelegateRef delegateRef = CTRunDelegateCreate(&callbacks, (__bridge void *)(self));
     // 使用 0xFFFC 作为空白的占位符
     unichar objectReplacementChar = 0xFFFC;
     NSString *content = [NSString stringWithCharacters:&objectReplacementChar length:1];
     NSDictionary *attributes = config.attributes;
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:content attributes:attributes];
-    
     // 给这个attributedString设置属性
     CFAttributedStringSetAttribute((CFMutableAttributedStringRef)attributedString, CFRangeMake(0, 1), kCTRunDelegateAttributeName, delegateRef);
     CFRelease(delegateRef);
-    
     RXCTImageFrame *rxctFrame = [[RXCTImageFrame alloc] init];
     rxctFrame.rxctData = self;
     *outRXCTFrame = rxctFrame;
-    
     return attributedString;
 }
 

@@ -18,10 +18,8 @@
 {
     NSMutableDictionary *attributes = config.attributes;
     UIColor *textColor = self.textColor;
-    
     if (textColor != nil) {
         attributes[(id)kCTForegroundColorAttributeName] = (id)textColor.CGColor;
-        
     }
     if (self.font != nil) {
         CGFloat fontSize = self.font.pointSize;
@@ -29,21 +27,15 @@
         attributes[(id)kCTFontAttributeName] = (__bridge id)fontRef;
         CFRelease(fontRef);
     }
-    
     // 添加一条线
     attributes[(id)kCTUnderlineStyleAttributeName] = [NSNumber numberWithInt:kCTUnderlineStyleSingle];
-    
-    
     NSString *content = self.content;
     NSAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:content attributes:attributes];
-    
     RXCTLinkFrame *rxctFrame = [[RXCTLinkFrame alloc] init];
     rxctFrame.rxctData = self;
     *outRXCTFrame = rxctFrame;
-    
     return attributedString;
 }
-
 
 - (NSString *)description
 {

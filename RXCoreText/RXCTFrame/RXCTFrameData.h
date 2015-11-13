@@ -31,9 +31,9 @@
 @property (nonatomic, strong) NSArray *attributedArray;
 
 // 具体的Array
-@property (nonatomic, readonly) NSArray *imageAry;
-@property (nonatomic, readonly) NSArray *linkAry;
-@property (nonatomic, readonly) NSArray *textAry;
+@property (nonatomic, strong, readonly) NSArray *imageAry;
+@property (nonatomic, strong, readonly) NSArray *linkAry;
+@property (nonatomic, strong, readonly) NSArray *textAry;
 
 
 // 解析数据

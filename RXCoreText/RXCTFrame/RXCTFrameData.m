@@ -15,10 +15,10 @@
 
 @interface RXCTFrameData ()
 
-@property (nonatomic, strong) NSArray *m_imageAry;
-@property (nonatomic, strong) NSArray *m_linkAry;
+@property (nonatomic, strong, readwrite) NSArray *imageAry;
+@property (nonatomic, strong, readwrite) NSArray *linkAry;
 
-@property (nonatomic, strong) NSArray *m_textAry;
+@property (nonatomic, strong, readwrite) NSArray *textAry;
 
 @end
 
@@ -26,18 +26,7 @@
 @implementation RXCTFrameData
 
 #pragma mark - ReadOnly Property
-- (NSArray *)imageAry
-{
-    return self.m_imageAry;
-}
-- (NSArray *)linkAry
-{
-    return self.m_linkAry;
-}
-- (NSArray *)textAry
-{
-    return self.m_textAry;
-}
+
 
 #pragma mark - Property
 - (void)setFrameRef:(CTFrameRef)frameRef
@@ -67,9 +56,9 @@
             [textAry addObject:rxctFrame];
         }
     }
-    self.m_imageAry = imageAry;
-    self.m_linkAry = linkAry;
-    self.m_textAry = textAry;
+    self.imageAry = imageAry;
+    self.linkAry = linkAry;
+    self.textAry = textAry;
     [self fillImagePosition];
 }
 

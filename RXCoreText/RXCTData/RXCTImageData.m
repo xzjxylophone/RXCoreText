@@ -58,7 +58,10 @@ static void deallocCallback(void *ref)
     *outRXCTFrame = rxctFrame;
     return attributedString;
 }
-
+- (BOOL)isValid
+{
+    return YES;
+}
 
 - (NSString *)description
 {

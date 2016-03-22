@@ -40,6 +40,10 @@
 {
     return [NSString stringWithFormat:@"class=%@, normal text: content=%@", NSStringFromClass([self class]), self.content];
 }
+- (BOOL)isValid
+{
+    return self.content.length > 0;
+}
 
 
 @end

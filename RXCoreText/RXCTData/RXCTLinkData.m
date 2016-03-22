@@ -13,6 +13,14 @@
 
 
 
+- (id)init
+{
+    if (self = [super init]) {
+        self.haveUnderLine = YES;
+    }
+    return self;
+}
+
 #pragma mark - Override
 - (NSAttributedString *)attributedStringWithConfig:(RXCTFrameConfig *)config outRXCTFrame:(RXCTFrame **)outRXCTFrame
 {
@@ -27,8 +35,10 @@
         attributes[(id)kCTFontAttributeName] = (__bridge id)fontRef;
         CFRelease(fontRef);
     }
-    // 添加一条线
-    attributes[(id)kCTUnderlineStyleAttributeName] = [NSNumber numberWithInt:kCTUnderlineStyleSingle];
+    if (self.haveUnderLine) {
+        // 添加一条线
+        attributes[(id)kCTUnderlineStyleAttributeName] = [NSNumber numberWithInt:kCTUnderlineStyleSingle];
+    }
     NSString *content = self.content;
     NSAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:content attributes:attributes];
     RXCTLinkFrame *rxctFrame = [[RXCTLinkFrame alloc] init];
@@ -40,6 +50,10 @@
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"class=%@, link text: content=%@", NSStringFromClass([self class]), self.content];
+}
+- (BOOL)isValid
+{
+    return self.content.length > 0;
 }
 
 

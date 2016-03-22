@@ -27,4 +27,6 @@
 - (NSAttributedString *)attributedStringWithConfig:(RXCTFrameConfig *)config outRXCTFrame:(RXCTFrame **)outRXCTFrame;
 
 
+- (BOOL)isValid;
+
 @end

@@ -20,6 +20,9 @@
 @property (nonatomic, strong) UIFont *font;
 @property (nonatomic, copy) NSString *content;
 
+// default = YES;
+@property (nonatomic, assign) BOOL haveUnderLine;
+
 
 
 @end

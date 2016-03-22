@@ -18,4 +18,13 @@
     NSLog(@"如果到这里就表示有错误了!!!");
     return nil;
 }
+
+
+- (BOOL)isValid
+{
+    // Need to override
+    // Do Nothing
+    NSLog(@"如果到这里就表示有错误了!!!");
+    return NO;
+}
 @end

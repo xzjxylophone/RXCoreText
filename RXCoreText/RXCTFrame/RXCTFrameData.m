@@ -132,6 +132,9 @@
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
     NSMutableArray *array = [NSMutableArray array];
     for (RXCTData *ctData in ary) {
+        if (![ctData isValid]) {
+            continue;
+        }
         NSUInteger startPos = attributedString.length;
         RXCTFrame *rxctFrame = nil;
         NSAttributedString *ctDataAttributedString = [ctData attributedStringWithConfig:config outRXCTFrame:&rxctFrame];

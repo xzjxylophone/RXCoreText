@@ -1,9 +1,13 @@
 
 
-
+target 'RXCTExample' do
 pod 'SDWebImage'
 
 
+
+inhibit_all_warnings!
+
+end
 
 
 

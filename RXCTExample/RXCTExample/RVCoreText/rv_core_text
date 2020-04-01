@@ -1,0 +1,15 @@
+{
+  "result" : 1,
+  "errorMsg" : "OK",
+  "impAdInfo" : [
+    {
+    "type" : 1,
+    "value": "abc",
+    "font": 16,
+    "color": "FFFFFF",
+    "height": 32
+    }
+  ],
+  "llsid" : 2000036607938157441
+}
+

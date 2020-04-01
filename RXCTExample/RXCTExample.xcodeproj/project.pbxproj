@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D42C17B352BA624415568D6 /* Pods_RXCTExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CA43EAA3852E5AECE7CA3D /* Pods_RXCTExample.framework */; };
 		58C4C1EE1BF1C6E40071E20D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4C1ED1BF1C6E40071E20D /* main.m */; };
 		58C4C1F11BF1C6E40071E20D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4C1F01BF1C6E40071E20D /* AppDelegate.m */; };
 		58C4C1F91BF1C6E40071E20D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58C4C1F81BF1C6E40071E20D /* Assets.xcassets */; };
@@ -28,14 +29,14 @@
 		58C4C2341BF1D31C0071E20D /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58C4C2321BF1D31C0071E20D /* MainViewController.xib */; };
 		58C4C2381BF1D4480071E20D /* coretext-image-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 58C4C2361BF1D4480071E20D /* coretext-image-1.jpg */; };
 		58C4C2391BF1D4480071E20D /* coretext-image-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 58C4C2371BF1D4480071E20D /* coretext-image-2.jpg */; };
-		B4216C5D901A47B974DC618C /* libPods-RXCTExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E692C2D3A0E8EBC6954E6BC9 /* libPods-RXCTExample.a */; };
-		DF6E4D0DBE32BEBBCD4EBF47 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABB892A97417B291FCCBD9E /* libPods.a */; };
+		8D2739D22434C711008EDF9B /* rv_core_text in Resources */ = {isa = PBXBuildFile; fileRef = 8D2739D12434C711008EDF9B /* rv_core_text */; };
+		8D883801243491C600980B2C /* RVRichTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D883800243491C600980B2C /* RVRichTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1439C54BE971A039C64D2941 /* Pods-RXCTExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXCTExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RXCTExample/Pods-RXCTExample.debug.xcconfig"; sourceTree = "<group>"; };
 		25F1E4D553F1D21F5FCDA323 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		2ABB892A97417B291FCCBD9E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		39CA43EAA3852E5AECE7CA3D /* Pods_RXCTExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RXCTExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41A0DF5C55C602496A35D668 /* Pods-RXCTExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXCTExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RXCTExample/Pods-RXCTExample.release.xcconfig"; sourceTree = "<group>"; };
 		4E6A87BECBAB1808C1B60325 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5850B25A1BF42D6000EC9144 /* RXCTExample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXCTExample-Prefix.pch"; sourceTree = "<group>"; };
@@ -76,7 +77,9 @@
 		58C4C2321BF1D31C0071E20D /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		58C4C2361BF1D4480071E20D /* coretext-image-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-1.jpg"; sourceTree = "<group>"; };
 		58C4C2371BF1D4480071E20D /* coretext-image-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-2.jpg"; sourceTree = "<group>"; };
-		E692C2D3A0E8EBC6954E6BC9 /* libPods-RXCTExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RXCTExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D2739D12434C711008EDF9B /* rv_core_text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rv_core_text; sourceTree = "<group>"; };
+		8D8837FF243491C600980B2C /* RVRichTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVRichTextView.h; sourceTree = "<group>"; };
+		8D883800243491C600980B2C /* RVRichTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVRichTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +90,7 @@
 				58C4C22F1BF1C8CC0071E20D /* CoreText.framework in Frameworks */,
 				58C4C22D1BF1C7D20071E20D /* UIKit.framework in Frameworks */,
 				58C4C22B1BF1C78F0071E20D /* CoreGraphics.framework in Frameworks */,
-				DF6E4D0DBE32BEBBCD4EBF47 /* libPods.a in Frameworks */,
-				B4216C5D901A47B974DC618C /* libPods-RXCTExample.a in Frameworks */,
+				4D42C17B352BA624415568D6 /* Pods_RXCTExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +118,7 @@
 		58C4C1EB1BF1C6E40071E20D /* RXCTExample */ = {
 			isa = PBXGroup;
 			children = (
+				8D8837FE243491AE00980B2C /* RVCoreText */,
 				58C4C2351BF1D4480071E20D /* Res */,
 				58C4C2291BF1C7750071E20D /* framework */,
 				58C4C2031BF1C7370071E20D /* RXCoreText */,
@@ -214,11 +217,20 @@
 			path = Res;
 			sourceTree = "<group>";
 		};
+		8D8837FE243491AE00980B2C /* RVCoreText */ = {
+			isa = PBXGroup;
+			children = (
+				8D2739D12434C711008EDF9B /* rv_core_text */,
+				8D8837FF243491C600980B2C /* RVRichTextView.h */,
+				8D883800243491C600980B2C /* RVRichTextView.m */,
+			);
+			path = RVCoreText;
+			sourceTree = "<group>";
+		};
 		C358F6E7ABF46A782050C81A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2ABB892A97417B291FCCBD9E /* libPods.a */,
-				E692C2D3A0E8EBC6954E6BC9 /* libPods-RXCTExample.a */,
+				39CA43EAA3852E5AECE7CA3D /* Pods_RXCTExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -246,10 +258,7 @@
 				58C4C1E51BF1C6E40071E20D /* Sources */,
 				58C4C1E61BF1C6E40071E20D /* Frameworks */,
 				58C4C1E71BF1C6E40071E20D /* Resources */,
-				94A13775C2014E78307E56AA /* Copy Pods Resources */,
-				6E413571CAE7C88904D19DA4 /* Embed Pods Frameworks */,
 				C0AED0E3566ACEBBD639392A /* [CP] Embed Pods Frameworks */,
-				8353F784BB581B2910A1497C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,6 +280,7 @@
 				TargetAttributes = {
 					58C4C1E81BF1C6E40071E20D = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = TM3LD9DLW8;
 					};
 				};
 			};
@@ -279,6 +289,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -298,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58C4C2391BF1D4480071E20D /* coretext-image-2.jpg in Resources */,
+				8D2739D22434C711008EDF9B /* rv_core_text in Resources */,
 				58C4C1F91BF1C6E40071E20D /* Assets.xcassets in Resources */,
 				58C4C2381BF1D4480071E20D /* coretext-image-1.jpg in Resources */,
 				58C4C2341BF1D31C0071E20D /* MainViewController.xib in Resources */,
@@ -320,51 +332,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6E413571CAE7C88904D19DA4 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8353F784BB581B2910A1497C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RXCTExample/Pods-RXCTExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		94A13775C2014E78307E56AA /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ABAB729D6E8046CC925AFD10 /* [CP] Check Pods Manifest.lock */ = {
@@ -391,13 +358,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RXCTExample/Pods-RXCTExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RXCTExample/Pods-RXCTExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RXCTExample/Pods-RXCTExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -418,6 +390,7 @@
 				58C4C2211BF1C7370071E20D /* RXCTTextData.m in Sources */,
 				58C4C1F11BF1C6E40071E20D /* AppDelegate.m in Sources */,
 				58C4C2281BF1C7370071E20D /* RXCTView.m in Sources */,
+				8D883801243491C600980B2C /* RVRichTextView.m in Sources */,
 				58C4C2331BF1D31C0071E20D /* MainViewController.m in Sources */,
 				58C4C1EE1BF1C6E40071E20D /* main.m in Sources */,
 				58C4C2271BF1C7370071E20D /* RXCTFrameConfig.m in Sources */,
@@ -515,6 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = TM3LD9DLW8;
 				GCC_PREFIX_HEADER = "RXCTExample/RXCTExample-Prefix.pch";
 				INFOPLIST_FILE = RXCTExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -531,6 +505,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = TM3LD9DLW8;
 				GCC_PREFIX_HEADER = "RXCTExample/RXCTExample-Prefix.pch";
 				INFOPLIST_FILE = RXCTExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;

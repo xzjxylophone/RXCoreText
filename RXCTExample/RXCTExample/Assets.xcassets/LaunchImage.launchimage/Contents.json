@@ -10,14 +10,6 @@
       "scale" : "3x"
     },
     {
-      "orientation" : "landscape",
-      "idiom" : "iphone",
-      "extent" : "full-screen",
-      "minimum-system-version" : "8.0",
-      "subtype" : "736h",
-      "scale" : "3x"
-    },
-    {
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "667h",
@@ -64,6 +56,15 @@
       "extent" : "full-screen",
       "subtype" : "retina4",
       "scale" : "2x"
+    },
+    {
+    "extent" : "full-screen",
+    "idiom" : "iphone",
+    "subtype" : "2436h",
+    "filename" : "1125x2436.png",
+    "minimum-system-version" : "11.0",
+    "orientation" : "portrait",
+    "scale" : "3x"
     }
   ],
   "info" : {

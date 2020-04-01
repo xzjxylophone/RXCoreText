@@ -196,12 +196,24 @@
 {
     // Drawing code
     [super drawRect:rect];
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+//    // 将坐标系上下翻转。对于底层的绘制引擎来说，屏幕的左下角是（0, 0）坐标。而对于上层的 UIKit 来说，左上角是 (0, 0) 坐标。所以我们为了之后的坐标系描述按 UIKit 来做，所以先在这里做一个坐标系的上下翻转操作。翻转之后，底层和上层的 (0, 0) 坐标就是重合的了。
+//    // 这个应该是 以左下角为(0,0)
+//    CGContextSetTextMatrix(context, CGAffineTransformIdentity);
+//    CGContextTranslateCTM(context, 0, self.bounds.size.height);
+//    CGContextScaleCTM(context, 1.0, -1.0);
+    
+    //获取当前上下文
     CGContextRef context = UIGraphicsGetCurrentContext();
-    // 将坐标系上下翻转。对于底层的绘制引擎来说，屏幕的左下角是（0, 0）坐标。而对于上层的 UIKit 来说，左上角是 (0, 0) 坐标。所以我们为了之后的坐标系描述按 UIKit 来做，所以先在这里做一个坐标系的上下翻转操作。翻转之后，底层和上层的 (0, 0) 坐标就是重合的了。
-    // 这个应该是 以左下角为(0,0)
+    //翻转坐标系步骤
+    //设置当前文本矩阵
     CGContextSetTextMatrix(context, CGAffineTransformIdentity);
+    //文本沿y轴移动
     CGContextTranslateCTM(context, 0, self.bounds.size.height);
-    CGContextScaleCTM(context, 1.0, -1.0);
+    //文本翻转成为CoreText坐标系
+    CGContextScaleCTM(context, 1, -1);
+    
+    
     if (self.rxctFrameData) {
         CTFrameDraw(self.rxctFrameData.frameRef, context);
     }

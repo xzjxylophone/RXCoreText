@@ -8,6 +8,8 @@
 
 #import "MainViewController.h"
 #import "RXCTHeader.h"
+#import "RVRichTextView.h"
+#import "Masonry.h"
 
 @interface MainViewController ()<RXCTViewDelegate>
 
@@ -87,7 +89,19 @@
     [self.view addSubview:rxctView];
 }
 
+- (void)testRVRichTextView {
+    self.view.backgroundColor = [UIColor redColor];
+    RVRichTextView *tmp = [RVRichTextView new];
+    tmp.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:tmp];
+    [tmp mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(@0);
+        make.top.equalTo(@100);
+        make.bottom.equalTo(@-60);
+    }];
+}
 
+#pragma mark - View Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -95,8 +109,11 @@
     self.title = @"首页";
     
     
-    [self testRXCTView];
+//    [self testRXCTView];
+    
+    [self testRVRichTextView];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -109,6 +126,8 @@
     return UIRectEdgeNone;
 }
 #endif
+
+
 
 /*
 #pragma mark - Navigation

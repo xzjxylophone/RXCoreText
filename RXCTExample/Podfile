@@ -1,7 +1,14 @@
 
+use_frameworks!
+
+platform :ios, '8.0'
 
 target 'RXCTExample' do
-pod 'SDWebImage'
+  
+
+ pod 'SDWebImage'
+ 
+ pod 'Masonry'
 
 
 

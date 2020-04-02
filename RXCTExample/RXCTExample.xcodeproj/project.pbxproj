@@ -30,6 +30,11 @@
 		58C4C2381BF1D4480071E20D /* coretext-image-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 58C4C2361BF1D4480071E20D /* coretext-image-1.jpg */; };
 		58C4C2391BF1D4480071E20D /* coretext-image-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 58C4C2371BF1D4480071E20D /* coretext-image-2.jpg */; };
 		8D2739D22434C711008EDF9B /* rv_core_text in Resources */ = {isa = PBXBuildFile; fileRef = 8D2739D12434C711008EDF9B /* rv_core_text */; };
+		8D2739D524358103008EDF9B /* RVRichTextBaseData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2739D424358103008EDF9B /* RVRichTextBaseData.m */; };
+		8D2739D82435812A008EDF9B /* RVRichTextTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2739D72435812A008EDF9B /* RVRichTextTextData.m */; };
+		8D2739DB24358164008EDF9B /* RVRichTextImageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2739DA24358164008EDF9B /* RVRichTextImageData.m */; };
+		8D2739DE24358182008EDF9B /* RVRichTextLinkTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2739DD24358182008EDF9B /* RVRichTextLinkTextData.m */; };
+		8D2739E1243581AB008EDF9B /* RVRichTextRichTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2739E0243581AB008EDF9B /* RVRichTextRichTextData.m */; };
 		8D883801243491C600980B2C /* RVRichTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D883800243491C600980B2C /* RVRichTextView.m */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +83,16 @@
 		58C4C2361BF1D4480071E20D /* coretext-image-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-1.jpg"; sourceTree = "<group>"; };
 		58C4C2371BF1D4480071E20D /* coretext-image-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-2.jpg"; sourceTree = "<group>"; };
 		8D2739D12434C711008EDF9B /* rv_core_text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rv_core_text; sourceTree = "<group>"; };
+		8D2739D324358103008EDF9B /* RVRichTextBaseData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVRichTextBaseData.h; sourceTree = "<group>"; };
+		8D2739D424358103008EDF9B /* RVRichTextBaseData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVRichTextBaseData.m; sourceTree = "<group>"; };
+		8D2739D62435812A008EDF9B /* RVRichTextTextData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVRichTextTextData.h; sourceTree = "<group>"; };
+		8D2739D72435812A008EDF9B /* RVRichTextTextData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVRichTextTextData.m; sourceTree = "<group>"; };
+		8D2739D924358164008EDF9B /* RVRichTextImageData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVRichTextImageData.h; sourceTree = "<group>"; };
+		8D2739DA24358164008EDF9B /* RVRichTextImageData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVRichTextImageData.m; sourceTree = "<group>"; };
+		8D2739DC24358182008EDF9B /* RVRichTextLinkTextData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVRichTextLinkTextData.h; sourceTree = "<group>"; };
+		8D2739DD24358182008EDF9B /* RVRichTextLinkTextData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVRichTextLinkTextData.m; sourceTree = "<group>"; };
+		8D2739DF243581AB008EDF9B /* RVRichTextRichTextData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVRichTextRichTextData.h; sourceTree = "<group>"; };
+		8D2739E0243581AB008EDF9B /* RVRichTextRichTextData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVRichTextRichTextData.m; sourceTree = "<group>"; };
 		8D8837FF243491C600980B2C /* RVRichTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVRichTextView.h; sourceTree = "<group>"; };
 		8D883800243491C600980B2C /* RVRichTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVRichTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -223,6 +238,16 @@
 				8D2739D12434C711008EDF9B /* rv_core_text */,
 				8D8837FF243491C600980B2C /* RVRichTextView.h */,
 				8D883800243491C600980B2C /* RVRichTextView.m */,
+				8D2739D324358103008EDF9B /* RVRichTextBaseData.h */,
+				8D2739D424358103008EDF9B /* RVRichTextBaseData.m */,
+				8D2739D62435812A008EDF9B /* RVRichTextTextData.h */,
+				8D2739D72435812A008EDF9B /* RVRichTextTextData.m */,
+				8D2739D924358164008EDF9B /* RVRichTextImageData.h */,
+				8D2739DA24358164008EDF9B /* RVRichTextImageData.m */,
+				8D2739DC24358182008EDF9B /* RVRichTextLinkTextData.h */,
+				8D2739DD24358182008EDF9B /* RVRichTextLinkTextData.m */,
+				8D2739DF243581AB008EDF9B /* RVRichTextRichTextData.h */,
+				8D2739E0243581AB008EDF9B /* RVRichTextRichTextData.m */,
 			);
 			path = RVCoreText;
 			sourceTree = "<group>";
@@ -359,11 +384,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RXCTExample/Pods-RXCTExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
@@ -386,14 +413,19 @@
 				58C4C21E1BF1C7370071E20D /* RXCTData.m in Sources */,
 				58C4C2231BF1C7370071E20D /* RXCTImageFrame.m in Sources */,
 				58C4C2251BF1C7370071E20D /* RXCTTextFrame.m in Sources */,
+				8D2739D524358103008EDF9B /* RVRichTextBaseData.m in Sources */,
+				8D2739D82435812A008EDF9B /* RVRichTextTextData.m in Sources */,
 				58C4C2261BF1C7370071E20D /* RXCTFrameData.m in Sources */,
 				58C4C2211BF1C7370071E20D /* RXCTTextData.m in Sources */,
 				58C4C1F11BF1C6E40071E20D /* AppDelegate.m in Sources */,
+				8D2739DB24358164008EDF9B /* RVRichTextImageData.m in Sources */,
+				8D2739DE24358182008EDF9B /* RVRichTextLinkTextData.m in Sources */,
 				58C4C2281BF1C7370071E20D /* RXCTView.m in Sources */,
 				8D883801243491C600980B2C /* RVRichTextView.m in Sources */,
 				58C4C2331BF1D31C0071E20D /* MainViewController.m in Sources */,
 				58C4C1EE1BF1C6E40071E20D /* main.m in Sources */,
 				58C4C2271BF1C7370071E20D /* RXCTFrameConfig.m in Sources */,
+				8D2739E1243581AB008EDF9B /* RVRichTextRichTextData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

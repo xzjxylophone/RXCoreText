@@ -9,6 +9,7 @@ target 'RXCTExample' do
  pod 'SDWebImage'
  
  pod 'Masonry'
+ pod 'MJExtension'
 
 
 

@@ -10,6 +10,8 @@ target 'RXCTExample' do
  
  pod 'Masonry'
  pod 'MJExtension'
+ 
+ pod 'RXCategory'
 
 
 

@@ -1,14 +1,18 @@
 {
   "result" : 1,
   "errorMsg" : "OK",
-  "impAdInfo" : [
+  "data" : [
     {
     "type" : 1,
-    "value": "abc",
+    "value": "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz",
     "font": 16,
-    "color": "FFFFFF",
+    "color": "000000",
     "lineSpace": 10,
-    "height": 32
+    "numberSpace" : 5,
+    "height": 90,
+    "top": 20,
+    "left" : 70,
+    "right": 15
     }
   ],
   "llsid" : 2000036607938157441

@@ -71,7 +71,26 @@
 //    frame = [self vvv1_1];
     
 //    frame = [self vvv2];
-    CTFrameDraw(frame, context);
+//    CTFrameDraw(frame, context);
+    CFArrayRef lineArrayRef = CTFrameGetLines(frame);
+    CFIndex count = CFArrayGetCount(lineArrayRef);
+    CGPoint lineOrigin[count];
+    CTFrameGetLineOrigins(frame, CFRangeMake(0, 0), lineOrigin);
+    
+    for (CFIndex i = 0; i < count; i++) {
+        CGPoint point = lineOrigin[i];
+        NSLog(@"point:%@", NSStringFromCGPoint(point));
+        CTLineRef lineRef = CFArrayGetValueAtIndex(lineArrayRef, i);
+        CGContextSetTextPosition(context, point.x, point.y);
+        
+//        CTLineDraw(lineRef, context);
+        
+        CFArrayRef runArrayRef = CTLineGetGlyphRuns(lineRef);
+        for (CFIndex j = 0; j < CFArrayGetCount(runArrayRef); j++) {
+            CTRunRef runRef = CFArrayGetValueAtIndex(runArrayRef, j);
+            CTRunDraw(runRef, context, CFRangeMake(0, 0));
+        }
+    }
 }
 
 
